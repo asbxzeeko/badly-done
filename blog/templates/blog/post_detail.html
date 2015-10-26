@@ -11,12 +11,10 @@
             <span class="title" style="margin-top: 40%;">badly done emma</span>
         </div>
         <div class="col-md-7 col-md-push-4 content">
-            {% for post in posts %}
                 <br />
                 <a href="{% url "post_detail" pk=post.pk %}"><h1 style="display: inline;">{{ post.title }}</h1></a>
                 <p style="color: gray;display: inline;">written by {{ post.author }} on {{ post.published_date }}</p>
-                <p>{{ post.text|linebreaks|truncatechars:300 }}</p>
-            {% endfor %}
+                <p>{{ post.text|linebreaks }}</p>
         </div>
     </body>
 </html>
